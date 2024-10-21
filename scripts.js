@@ -1,12 +1,13 @@
-const musicContainer = document.querySelector('.music-container')
-const playBtn = document.querySelector('#play')
-const prevBtn = document.querySelector('#prev')
-const nextBtn = document.querySelector('#next')
-const audio = document.querySelector('#audio')
-const progress = document.querySelector('.progress')
-const progressContainer = document.querySelector('.progress-container')
-const title = document.querySelector('#title')
-const cover = document.querySelector('#cover')
+const musicContainer = document.getElementById('music-container')
+const playBtn = document.getElementById('play')
+const prevBtn = document.getElementById('prev')
+const nextBtn = document.getElementById('next')
+
+const audio = document.getElementById('audio')
+const progress = document.getElementById('progress')
+const progressContainer = document.getElementById('progress-container')
+const title = document.getElementById('title')
+const cover = document.getElementById('cover')
 
 
 const songs = ['song1', 'song2', 'song3']
@@ -25,12 +26,16 @@ function playSong() {
     musicContainer.classList.add('play')
     playBtn.querySelector('i.fas').classList.remove('fa-play')
     playBtn.querySelector('i.fas').classList.add('fa-pause')
+
+    audio.play()
 }
 
 function pauseSong() {
     musicContainer.classList.remove('play')
     playBtn.querySelector('i.fas').classList.add('fa-play')
     playBtn.querySelector('i.fas').classList.remove('fa-pause')
+
+    audio.pause()
 }
 
 
