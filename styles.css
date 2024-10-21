@@ -59,8 +59,6 @@ body {
     background-color: turquoise;
     color: white;
     font-size: 30px;
-    cursor: pointer;
-    border: 0;
 }
 
 .music-info {
@@ -74,16 +72,19 @@ body {
     opacity: 0;
     transform: translateY(0%);
     transition: transform 0.3s ease-in opacity 0.3s ease-in;
-}
-
-.music-info h4 {
-    margin: 0;
+    z-index: 0;
 }
 
 .music-container.play .music-info {
     opacity: 1;
     transform: translateY(-100%);
 }
+
+.music-info h4 {
+    margin: 0;
+}
+
+
 
 .progress-container {
     background-color: white;

@@ -1,0 +1,2 @@
+Optional Functionality:
+    -Correct the array of songs to include alphabetized list
